@@ -1,4 +1,4 @@
-package com.github.foureyesdev.hexagonal.adpters.out.repository.entity;
+package com.github.foureyesdev.hexagonal.adapter.out.persistence;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

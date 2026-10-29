@@ -1,6 +1,6 @@
-package com.github.foureyesdev.hexagonal.adpters.out.client.mapper;
+package com.github.foureyesdev.hexagonal.adapter.out.client.mapper;
 
-import com.github.foureyesdev.hexagonal.adpters.out.client.response.AddressResponse;
+import com.github.foureyesdev.hexagonal.adapter.out.client.response.AddressResponse;
 import com.github.foureyesdev.hexagonal.application.core.domain.Address;
 import org.mapstruct.Mapper;
 

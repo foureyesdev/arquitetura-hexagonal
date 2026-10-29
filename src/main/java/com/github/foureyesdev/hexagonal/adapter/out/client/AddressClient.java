@@ -1,6 +1,6 @@
-package com.github.foureyesdev.hexagonal.adpters.out.client;
+package com.github.foureyesdev.hexagonal.adapter.out.client;
 
-import com.github.foureyesdev.hexagonal.adpters.out.client.response.AddressResponse;
+import com.github.foureyesdev.hexagonal.adapter.out.client.response.AddressResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
