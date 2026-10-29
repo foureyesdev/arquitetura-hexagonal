@@ -1,16 +1,16 @@
 package com.github.foureyesdev.hexagonal.adapter.out.persistence;
 
-import com.github.foureyesdev.hexagonal.application.core.domain.Customer;
-import com.github.foureyesdev.hexagonal.application.ports.out.InsertCustomerOutputPort;
+import com.github.foureyesdev.hexagonal.core.model.Customer;
+import com.github.foureyesdev.hexagonal.core.port.out.CustomerRepositoryPort;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CustomerPersistenceAdapter implements InsertCustomerOutputPort {
+public class CustomerPersistenceAdapter implements CustomerRepositoryPort {
 
     private final CustomerRepository repository;
-    private final CustomerMapper mapper;
+    private final CustomerEntityMapper mapper;
 
-    public CustomerPersistenceAdapter(CustomerRepository repository, CustomerMapper mapper) {
+    public CustomerPersistenceAdapter(CustomerRepository repository, CustomerEntityMapper mapper) {
         this.repository = repository;
         this.mapper = mapper;
     }

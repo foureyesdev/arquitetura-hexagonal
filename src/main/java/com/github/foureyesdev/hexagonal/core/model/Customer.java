@@ -1,4 +1,4 @@
-package com.github.foureyesdev.hexagonal.application.core.domain;
+package com.github.foureyesdev.hexagonal.core.model;
 
 public class Customer {
 

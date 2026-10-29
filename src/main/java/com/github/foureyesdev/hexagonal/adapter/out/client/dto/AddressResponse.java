@@ -1,4 +1,4 @@
-package com.github.foureyesdev.hexagonal.adapter.out.client.response;
+package com.github.foureyesdev.hexagonal.adapter.out.client.dto;
 
 public record AddressResponse (
         String street,
