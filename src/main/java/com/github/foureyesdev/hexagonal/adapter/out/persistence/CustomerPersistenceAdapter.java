@@ -18,7 +18,7 @@ public class CustomerPersistenceAdapter implements CustomerRepositoryPort {
     }
 
     @Override
-    public void insert(Customer customer) {
+    public void save(Customer customer) {
         CustomerEntity customerEntity = mapper.toCustomerEntity(customer);
         repository.save(customerEntity);
     }
