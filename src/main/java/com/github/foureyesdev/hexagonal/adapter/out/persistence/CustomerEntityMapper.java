@@ -10,5 +10,5 @@ public interface CustomerEntityMapper {
 
     CustomerEntity toCustomerEntity(Customer customer);
 
-    Optional<Customer> toCustomerOptional(CustomerEntity entity);
+    Customer toCustomer(CustomerEntity entity);
 }
