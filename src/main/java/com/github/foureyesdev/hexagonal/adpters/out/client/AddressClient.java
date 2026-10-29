@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(
-        name = "FindAddressByZipCodeClient",
+        name = "AddressClient",
         url = "${spring.client.address.url}"
 )
-public interface FindAddressByZipCodeClient {
+public interface AddressClient {
 
     @GetMapping("/{zipCode}")
-    AddressResponse find(@PathVariable("zipCode") String zipCode);
+    AddressResponse findByZipCode(@PathVariable("zipCode") String zipCode);
 }
