@@ -4,21 +4,21 @@ import com.github.foureyesdev.hexagonal.core.model.Address;
 import com.github.foureyesdev.hexagonal.core.model.Customer;
 import com.github.foureyesdev.hexagonal.core.port.in.InsertCustomerUseCase;
 import com.github.foureyesdev.hexagonal.core.port.out.AddressPort;
-import com.github.foureyesdev.hexagonal.core.port.out.InsertCustomerPort;
+import com.github.foureyesdev.hexagonal.core.port.out.CustomerRepositoryPort;
 
 public class InsertCustomerService implements InsertCustomerUseCase {
 
     private final AddressPort findAddress;
-    private final InsertCustomerPort insertCustomer;
+    private final CustomerRepositoryPort customerPort;
 
-    public InsertCustomerService(AddressPort findAddress, InsertCustomerPort insertCustomer) {
+    public InsertCustomerService(AddressPort findAddress, CustomerRepositoryPort customerPort) {
         this.findAddress = findAddress;
-        this.insertCustomer = insertCustomer;
+        this.customerPort = customerPort;
     }
 
     public void insert(Customer customer, String zipCode) {
         Address address = findAddress.find(zipCode);
         customer.setAddress(address);
-        insertCustomer.insert(customer);
+        customerPort.insert(customer);
     }
 }

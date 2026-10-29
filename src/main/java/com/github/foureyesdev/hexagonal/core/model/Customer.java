@@ -57,6 +57,6 @@ public class Customer {
     }
 
     public void setValidCpf(Boolean validCpf) {
-        isValidCpf = validCpf;
+        this.isValidCpf = validCpf;
     }
 }
